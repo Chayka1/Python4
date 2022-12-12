@@ -47,9 +47,11 @@ def task_1_5():
 
     nums.close()
 
+
 def task_1_6():
     nums = open('files/number_list.txt', 'r')
     nums.close()
+
 
 def task_1_7():
     students = open('files/students.txt', 'r')
@@ -60,6 +62,7 @@ def task_1_7():
 
     students.close()
 
+
 def task_1_8():
     students = open('files/students.txt', 'r')
 
@@ -68,4 +71,3 @@ def task_1_8():
         names = names.replace('Джулия Милан 70', 'Джулия Милан 100')
 
     students.close()
-
