@@ -71,3 +71,29 @@ def task_1_8():
         names = names.replace('Джулия Милан 70', 'Джулия Милан 100')
 
     students.close()
+
+
+def task_1_9():
+    try:
+        x = float('abc123')
+        print('Конвертация завершена')
+    except IOError:
+        print('Этот программный код вызвыл ошибку I0Error')
+    except ValueError:
+        print('Этот программный код вызвыл ошибку ValueError')
+    print('Конец')
+
+
+def task_1_10():
+    try:
+        x = float('abc123')
+        print('Конвертация завершена')
+    except IOError:
+        print('Этот программный код вызвыл ошибку I0Error')
+    except ZeroDivisionError:
+        print('Этот программный код вызвыл ошибку ZeroDivisionError')
+    except:
+        print('Произошла ошибка')
+    print('Конец')
+
+
