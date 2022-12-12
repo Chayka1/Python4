@@ -34,4 +34,17 @@ def task_1_4():
 
 
 def task_1_5():
+    total = 0
+
+    nums = open('files/number_list.txt', 'r')
+
+    for nums_ in nums:
+        nums_ = nums_.rstrip('\n')
+        nums_ = int(nums_)
+        total += nums_
+
+    print(total)
+
+    nums.close()
+
 
