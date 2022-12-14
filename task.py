@@ -109,16 +109,21 @@ def task_2_1():
 def task_2_2():
     filename = input('Введите имя файла: ')
 
-    file = open(filename, 'r')
-    lines = file.readlines()
+    f = open(filename, 'r')
 
-    if len(lines) < 5:
-        for lines_ in lines:
-            lines_ = lines_.rstrip('\n')
-            print(lines_)
+    line_count = sum(1 for line in open(filename))
+    if line_count < 5:
+        for i in range(line_count):
+            print(f.readline())
     else:
         for i in range(5):
-            print(file.readline())
+            print(f.readline())
+
+    f.close()
+
+
+
+
 
 
 
