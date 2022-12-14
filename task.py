@@ -112,6 +112,7 @@ def task_2_2():
     f = open(filename, 'r')
 
     line_count = sum(1 for line in open(filename))
+
     if line_count < 5:
         for i in range(line_count):
             print(f.readline())
@@ -133,6 +134,8 @@ def taks_2_3():
         lines = lines.rstrip('\n')
         print(f'{numbers}: {lines}')
 
+    f.close()
+
 
 def task_2_4():
     f = open('names.txt', 'r')
@@ -142,6 +145,8 @@ def task_2_4():
         total += 1
 
     print(total)
+
+    f.close()
 
 
 def task_2_5():
@@ -155,3 +160,21 @@ def task_2_5():
 
     print(total)
 
+    f.close()
+
+
+def task_2_6():
+    f = open('nums.txt', 'r')
+
+    total = 0
+    amount = sum(1 for line in open('nums.txt'))
+
+    for num in f:
+        num = int(num)
+        total += num
+
+    average = total / amount
+
+    print(f'Среднее арифметическое равно: {average}')
+
+    f.close()
