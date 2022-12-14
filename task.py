@@ -122,8 +122,16 @@ def task_2_2():
     f.close()
 
 
+def taks_2_3():
+    filename = input('Введите имя файла: ')
 
+    f = open(filename, 'r')
 
+    numbers = 0
+    for lines in f:
+        numbers += 1
+        lines = lines.rstrip('\n')
+        print(f'{numbers}: {lines}')
 
 
 
