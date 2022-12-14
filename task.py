@@ -134,4 +134,24 @@ def taks_2_3():
         print(f'{numbers}: {lines}')
 
 
+def task_2_4():
+    f = open('names.txt', 'r')
+
+    total = 0
+    for line in f:
+        total += 1
+
+    print(total)
+
+
+def task_2_5():
+    f = open('nums.txt', 'r')
+
+    total = 0
+
+    for num in f:
+        num = int(num)
+        total += num
+
+    print(total)
 
