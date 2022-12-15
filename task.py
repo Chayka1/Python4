@@ -194,8 +194,8 @@ def task_2_7():
 
 def task_2_8():
     total = 0
-    with open("random_numbers.txt") as inp:
-        lines = inp.readlines()
+    with open("random_numbers.txt") as f:
+        lines = f.readlines()
         lines = [line.rstrip('\n') for line in lines]
     random_line = random.choices(lines, k=random.randrange(len(lines)))
 
@@ -208,3 +208,4 @@ def task_2_8():
           f'Количество чисел: {amount_of_numbers}\n'
           f'Сумма чисел: {total}')
 
+task_2_8()
