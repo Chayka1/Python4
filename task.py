@@ -191,3 +191,20 @@ def task_2_7():
 
     file.close()
 
+
+def task_2_8():
+    total = 0
+    with open("random_numbers.txt") as inp:
+        lines = inp.readlines()
+        lines = [line.rstrip('\n') for line in lines]
+    random_line = random.choices(lines, k=random.randrange(len(lines)))
+
+    amount_of_numbers = len(random_line)
+
+    for num in random_line:
+        total += int(num)
+
+    print(f'Рандомные числа: {random_line}\n'
+          f'Количество чисел: {amount_of_numbers}\n'
+          f'Сумма чисел: {total}')
+
