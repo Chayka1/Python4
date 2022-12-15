@@ -208,4 +208,3 @@ def task_2_8():
           f'Количество чисел: {amount_of_numbers}\n'
           f'Сумма чисел: {total}')
 
-task_2_8()
