@@ -1,3 +1,4 @@
+import random
 def task_1_1():
     name = open('my_name.txt', 'w')
     name.write('Max')
@@ -178,3 +179,15 @@ def task_2_6():
     print(f'Среднее арифметическое равно: {average}')
 
     f.close()
+
+
+def task_2_7():
+    amount = int(input('Введите количество рандомных чисел: '))
+    file = open('random_numbers.txt', 'w')
+
+    for i in range(amount):
+        nums = random.randint(1, 500)
+        file.write(f'{nums}\n')
+
+    file.close()
+
