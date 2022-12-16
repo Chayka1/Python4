@@ -262,3 +262,25 @@ def task_2_10():
     program2()
 
 
+def task_2_11():
+    f = open('index.html', 'w')
+
+    name = input('Введите имя: ')
+    description = input('Опишите себя: ')
+    indexHtml = f'<html>\n' \
+                f'<head>\n' \
+                f'</head>\n' \
+                f'<body>\n' \
+                f' <center>\n' \
+                f' <h1>{name}<h1>\n' \
+                f' <center>\n' \
+                f' <hr />\n' \
+                f' {description}\n' \
+                f' <hr />\n' \
+                f'</body>\n' \
+                f'</html>'
+
+    f.write(indexHtml)
+    f.close()
+
+
