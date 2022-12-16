@@ -231,3 +231,34 @@ def task_2_9():
         f.close()
 
 
+def task_2_10():
+    def program1():
+        f = open('golf.txt', 'w')
+
+        action = 'да'
+
+        while action == 'да':
+            name = input('Введите имя: ')
+            points = input('Введите очки: ')
+
+            f.write(name + '\n')
+            f.write(points + ' очков\n')
+
+            action = input('Хотите ещё добавить игрока да/нет? ')
+        else:
+            f.close()
+
+    program1()
+
+    def program2():
+        f = open('golf.txt', 'r')
+
+        for players in f:
+            players = players.rstrip('\n')
+            print(players)
+
+        f.close()
+
+    program2()
+
+
