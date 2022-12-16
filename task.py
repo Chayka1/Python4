@@ -208,3 +208,26 @@ def task_2_8():
           f'Количество чисел: {amount_of_numbers}\n'
           f'Сумма чисел: {total}')
 
+
+def task_2_9():
+    global amount, f
+    total = 0
+    try:
+        f = open('nums.txt', 'r')
+        amount = sum(1 for line in open('nums.txt'))
+
+        for num in f:
+            num = int(num)
+            total += num
+    except IOError:
+        print(IOError)
+    except ValueError:
+        print(ValueError)
+    finally:
+        average = total / amount
+
+        print(f'Среднее арифметическое равно: {average}')
+
+        f.close()
+
+
